@@ -1,34 +1,29 @@
 .player {
-  overflow: hidden;
   display: flex;
+  flex-direction: column;
   align-items: center;
   background-color: rgb(162, 162, 162, 0.8);
-  width: 300px;
-  border-top-left-radius: 50px;
+  width: 100px;
+  border-bottom-right-radius: 50px;
   border-bottom-left-radius: 50px;
   > img {
     width: 50px;
     height: 50px;
     object-fit: cover;
     border-radius: 100%;
+    margin-top: 10px;
   }
   > span {
-    font-size: 24px;
-    margin-left: 8px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    font-size: 14px;
   }
 }
 
-:host {
-  position: absolute;
-  right: 0;
-  cursor: pointer;
-  &:hover{
-    filter: brightness(1.15);
-  }
-}
 .player-active {
   background-color: orange !important;
+}
+:host {
+  cursor: pointer;
+  &:hover {
+    filter: brightness(1.15);
+  }
 }
